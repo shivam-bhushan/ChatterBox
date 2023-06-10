@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:thewall1/components/login_button.dart';
 import 'package:thewall1/components/text_field.dart';
@@ -17,6 +18,46 @@ class _RegisterPageState extends State<RegisterPage> {
   final emailTextController = TextEditingController();
   final passwordTextController = TextEditingController();
   final confirmPasswordController = TextEditingController();
+
+  //signup
+
+  void signUp() async {
+    showDialog(
+        context: context,
+        builder: (context) => const Center(
+              child: CircularProgressIndicator(),
+            ));
+
+    //make sure confirm password matches
+    if (passwordTextController.text != confirmPasswordController.text) {
+      //pop the loading
+      Navigator.pop(context);
+
+      //display error
+      displayMessage("Passwords don't match");
+      return;
+    }
+    try {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: emailTextController.text,
+          password: passwordTextController.text);
+      if (context.mounted) Navigator.pop(context);
+    } on FirebaseAuthException catch (e) {
+      //pop loading circle
+      Navigator.pop(context);
+      displayMessage(e.code);
+    }
+  }
+
+  //display error
+  void displayMessage(String message) {
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              title: Text(message),
+            ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +122,7 @@ class _RegisterPageState extends State<RegisterPage> {
               //Button
 
               LoginButton(
-                onTap: () {},
+                onTap: signUp,
                 text: 'Create Account',
               ),
 
