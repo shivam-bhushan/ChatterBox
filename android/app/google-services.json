@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "98103454876",
+    "project_id": "chatterbox-e8a75",
+    "storage_bucket": "chatterbox-e8a75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98103454876:android:ae33d83bf9be0f106f1159",
+        "android_client_info": {
+          "package_name": "com.example.thewall1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98103454876-kkugr8uhan5m57fkj0tuj4lv76tu91b1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApr7Q2u5oZPAwphnT6KoT9cPi6YemGbh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98103454876-kkugr8uhan5m57fkj0tuj4lv76tu91b1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
