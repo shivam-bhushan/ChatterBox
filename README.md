@@ -1,16 +1,9 @@
 # ChatterBox
+ChatterBox is a simple social media app built using Flutter and powered by Firebase, allowing users to connect with friends, share posts, and engage in meaningful conversations. This app is designed to provide a seamless user experience and make social networking fun and easy.
 
-A new Flutter project.
+## Features
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- User Authentication: Users can create accounts, log in, and reset passwords securely with Firebase Authentication.
+- News Feed: Users can view posts shared by their friends and engage with them through likes and comments (liking system still building).
+- Create Posts: Users can compose and share their thoughts, images, and links
+- User Profiles: Each user has a personalized profile page displaying their posts and basic information.
